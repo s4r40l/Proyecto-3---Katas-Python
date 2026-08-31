@@ -36,6 +36,18 @@ palabras = ["ordenador", "coche", "ordenar", "composición", "correr","comer"] #
 print(buscar_palabras(palabras, "ordena")) # Imprimir por pantalla el resultado de la función con la lista de palabras y el objetivo como parámetros
 
 # =========== EJERCICIO NUMERO 4 ===========
+def diferencias(listaA, listaB):
+    # Usamos map() para aplicar una operación a cada par de elementos de ambas listas.
+    # La función lambda recibe dos valores (x de lista1 y y de lista2)
+    # y devuelve la diferencia entre ellos.
+    resultado = list(map(lambda x, y: x - y, listaA, listaB))
+
+    return resultado  # Devolvemos la lista con todas las diferencias calculadas
+
+a = [10, 20, 30]
+b = [1, 5, 7]
+
+print(diferencias(a, b)) # Imprimir por pantalla el resultado de la función con los dos arrays como parámetros
 
 # =========== EJERCICIO NUMERO 5 ===========
 
