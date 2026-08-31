@@ -78,6 +78,34 @@ def factorial(num):
 print(factorial(5))
 
 # =========== EJERCICIO NUMERO 7 ===========
+datos = [(1, 2), ("hola", "mundo"), ("DAM", 2026)]
+
+def tuplas_a_strings(lista_tuplas):
+    # Creamos una transformación usando map().
+    # map() aplica una función a cada elemento de la lista.
+    # En este caso, cada elemento es una tupla como (1, 2) o ("hola", "mundo").
+
+    # La función lambda recibe una tupla 'tup'.
+    # Queremos convertir esa tupla en un string.
+    # Para ello, recorremos cada elemento de la tupla y lo convertimos a texto con str(x).
+    # Luego usamos " ".join(...) para unir todos los elementos en un solo string separados por espacios.
+    # Ejemplo: (1, 2) → "1 2"
+    # Ejemplo: ("hola", "mundo") → "hola mundo"
+
+    resultado = list(
+        map(
+            lambda tup: " ".join(
+                str(x) for x in tup  # Convertimos cada elemento de la tupla a string
+            ),
+            lista_tuplas  # Esta es la lista original de tuplas
+        )
+    )
+
+    # Convertimos el resultado de map() en una lista normal usando list().
+    # Finalmente devolvemos esa lista de strings.
+    return resultado
+
+print(tuplas_a_strings(datos))
 
 # =========== EJERCICIO NUMERO 8 ===========
 
