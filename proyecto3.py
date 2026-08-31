@@ -23,6 +23,17 @@ dobles = list(map(lambda x: x * 2, numeros))  # Convertimos el resultado de map 
 print(dobles)  # Mostramos la nueva lista con los valores duplicados
 
 # =========== EJERCICIO NUMERO 3 ===========
+def buscar_palabras(lista_palabras, objetivo):
+    resultado = []  # Lista donde guardaremos las palabras que contienen el objetivo
+
+    for palabra in lista_palabras:  # Recorremos cada palabra de la lista original
+        if objetivo in palabra:  # Comprobamos si la palabra objetivo aparece dentro de la palabra actual
+            resultado.append(palabra)  # Si la contiene, la añadimos a la lista resultado
+
+    return resultado  # Devolvemos la lista final con todas las coincidencias
+
+palabras = ["ordenador", "coche", "ordenar", "composición", "correr","comer"] # Lista de palabras
+print(buscar_palabras(palabras, "ordena")) # Imprimir por pantalla el resultado de la función con la lista de palabras y el objetivo como parámetros
 
 # =========== EJERCICIO NUMERO 4 ===========
 
