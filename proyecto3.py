@@ -50,6 +50,20 @@ b = [1, 5, 7]
 print(diferencias(a, b)) # Imprimir por pantalla el resultado de la función con los dos arrays como parámetros
 
 # =========== EJERCICIO NUMERO 5 ===========
+def evaluar_media(numeros, nota_aprobado=5): # Parámetros de la función, la segunda es opcional y si no viene con valor, el predeterminado es el 5
+    # Calculamos la media sumando todos los valores y dividiéndolos entre la cantidad de elementos
+    media = sum(numeros) / len(numeros)
+
+    # Comprobamos si la media es mayor o igual que la nota mínima para aprobar
+    if media >= nota_aprobado:
+        estado = "aprobado"   # Si cumple, el estado es aprobado
+    else:
+        estado = "suspenso"   # Si no cumple, el estado es suspenso
+
+    # Devolvemos una tupla con la media y el estado
+    return (media, estado)
+
+print(evaluar_media([4, 6, 8, 5]))
 
 # =========== EJERCICIO NUMERO 6 ===========
 
