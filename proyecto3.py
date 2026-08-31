@@ -14,6 +14,13 @@ def frecuencias_letras(cadena):  # Definimos la función y le damos un parámetr
 print(frecuencias_letras("hola mundo"))  # Llamamos a la función y mostramos el resultado por pantalla
 
 # =========== EJERCICIO NUMERO 2 ===========
+numeros = [1, 2, 3, 4, 5]  # Lista original de números
+
+# Usamos map() para aplicar una función a cada elemento de la lista.
+# La función lambda recibe un número x y devuelve x * 2 (su doble).
+dobles = list(map(lambda x: x * 2, numeros))  # Convertimos el resultado de map en una lista
+
+print(dobles)  # Mostramos la nueva lista con los valores duplicados
 
 # =========== EJERCICIO NUMERO 3 ===========
 
