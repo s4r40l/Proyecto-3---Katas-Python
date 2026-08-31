@@ -66,6 +66,16 @@ def evaluar_media(numeros, nota_aprobado=5): # Parámetros de la función, la se
 print(evaluar_media([4, 6, 8, 5]))
 
 # =========== EJERCICIO NUMERO 6 ===========
+def factorial(num):
+    # Cuando num es 0 o 1, el factorial es 1
+    if num == 0 or num == 1:
+        return 1
+
+    # Llamamos a la función otra vez con n-1
+    # y multiplicamos ese resultado por n
+    return num * factorial(num - 1)
+
+print(factorial(5))
 
 # =========== EJERCICIO NUMERO 7 ===========
 
