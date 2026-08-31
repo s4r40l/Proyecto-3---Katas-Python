@@ -108,6 +108,29 @@ def tuplas_a_strings(lista_tuplas):
 print(tuplas_a_strings(datos))
 
 # =========== EJERCICIO NUMERO 8 ===========
+try:
+    # Pedimos los dos números al usuario
+    num1 = float(input("Primer número: "))
+    num2 = float(input("Segundo número: "))
+
+    # Intentamos realizar la división
+    resultado = num1 / num2
+
+# Si el usuario pone algo que no es un número saltará ValueError
+except ValueError:
+    print("Error: Introduce valores numéricos válidos.")
+
+# Si intenta dividir entre cero saltará ZeroDivisionError
+except ZeroDivisionError:
+    print("Error: No se puede dividir entre cero.")
+
+# Si no ocurre ningún error, este bloque se ejecuta
+else:
+    print(f"Resultado: {resultado}")
+
+# Este bloque se ejecuta siempre, ocurra o no ocurra un error
+finally:
+    print("Función finalizada.")
 
 # =========== EJERCICIO NUMERO 9 ===========
 
