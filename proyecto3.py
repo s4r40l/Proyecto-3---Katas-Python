@@ -276,6 +276,18 @@ numeros = [1, 5, 10]
 print(suma_tres(numeros))
 
 # =========== EJERCICIO NUMERO 16 ===========
+def palabras_largas(frase, n):
+    # Convertimos la frase en una lista de palabras, split por defecto separa por espacios
+    palabras = frase.split()
+
+    # Usamos filter() para quedarnos solo con las palabras que su longitud sea más grande que n
+    resultado = list(filter(lambda palabra: len(palabra) > n, palabras))
+
+    return resultado
+
+texto = "Los desarrolladores crean aplicaciones increíbles"
+print(palabras_largas(texto, 5))
+
 # =========== EJERCICIO NUMERO 17 ===========
 # =========== EJERCICIO NUMERO 18 ===========
 # =========== EJERCICIO NUMERO 19 ===========
