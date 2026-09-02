@@ -176,5 +176,55 @@ calcular_promedio([4, 6, 8])
 calcular_promedio([])
 calcular_promedio([4, "hola", 8])
 # =========== EJERCICIO NUMERO 11 ===========
+# =========== EJERCICIO NUMERO 11 ===========
+# Pedimos al usuario que introduzca su edad
+try:
+    edad = int(input("Introduce tu edad: "))
 
+    # Comprobamos si la edad está dentro del rango
+    if edad < 0 or edad > 120:
+        # Lanzamos un ValueError manualmente porque el valor es incorrecto
+        raise ValueError
+
+    print(f"Tu edad es: {edad}")
+
+# Si el usuario pone algo que no es un número o un número fuera del rango
+except ValueError:
+    print("Error: Debes introducir un número válido entre 0 y 120.")
+
+# Cualquier otro error
+except:
+    print("Error no especificado.")
+
+# Final de proceso
+finally:
+    print("Operación finalizada")
+
+"""
+Había otra manera sin tener que lanzar la excepción manualmente pero es menos eficiente:
+try:
+    # Pedimos la edad al usuario e intentamos convertirla a entero
+    edad = int(input("Introduce tu edad: "))
+
+    # Comprobamos si la edad está dentro del rango permitido
+    # Si está fuera del rango, no lanza una excepción automáticamente,
+    # así que simplemente mostramos un mensaje
+    if edad < 0 or edad > 120:
+        print("Error: La edad debe estar entre 0 y 120.")
+    else:
+        print(f"Tu edad es: {edad}")
+
+# Si el usuario introduce algo que no es un número
+except ValueError:
+    print("Error: Debes introducir un valor numérico.")
+
+# Cualquier otro error inesperado
+except:
+    print("Ocurrió un error inesperado.")
+
+# Este bloque se ejecuta siempre
+finally:
+    print("Finalizando el proceso...")
+
+"""
 # =========== EJERCICIO NUMERO 12 ===========
