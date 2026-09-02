@@ -302,6 +302,22 @@ def lista_a_numero(digitos):
 print(lista_a_numero([5, 7, 2]))
 
 # =========== EJERCICIO NUMERO 18 ===========
+# Creamos la lista de diccionarios desde cero
+estudiantes = []
+
+# Añadimos estudiantes manualmente
+estudiantes.append({"nombre": "Ana", "edad": 20, "calificacion": 95})
+estudiantes.append({"nombre": "Luis", "edad": 22, "calificacion": 88})
+estudiantes.append({"nombre": "María", "edad": 19, "calificacion": 90})
+estudiantes.append({"nombre": "Carlos", "edad": 21, "calificacion": 76})
+estudiantes.append({"nombre": "Sofía", "edad": 23, "calificacion": 99})
+
+# Usamos filter() para obtener solo los estudiantes con calificación >= 90
+estudiantes_destacados = list(filter(lambda est: est["calificacion"] >= 90, estudiantes))
+
+# Mostramos el resultado
+print(estudiantes_destacados)
+
 # =========== EJERCICIO NUMERO 19 ===========
 # =========== EJERCICIO NUMERO 20 ===========
 # =========== EJERCICIO NUMERO 21 ===========
