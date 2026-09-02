@@ -149,7 +149,32 @@ mascotas = ["Perro", "Gato", "Mapache", "Tortuga", "Oso", "Canario"]
 print(filtrar_mascotas(mascotas))
 
 # =========== EJERCICIO NUMERO 10 ===========
+def calcular_promedio(numeros):
+    try:
+        # Intentamos calcular el promedio
+        # Si la lista está vacía, esto provocará un ZeroDivisionError
+        promedio = sum(numeros) / len(numeros)
+        print(f"El promedio es: {promedio}")
 
+    # Si la lista está vacía len(numeros) es 0 y no se puede dividir entre cero
+    except ZeroDivisionError:
+        print("Error: La lista está vacía, no se puede chacer el cálculo")
+
+    # Si la lista contiene elementos no numéricos sum() fallará
+    except TypeError:
+        print("Error: No se pueden sumar los elementos de la lista")
+
+    # Cualquier otro error
+    except:
+        print("Error")
+
+    # Este bloque se ejecuta siempre
+    finally:
+        print("Operación finalizada")
+
+calcular_promedio([4, 6, 8])
+calcular_promedio([])
+calcular_promedio([4, "hola", 8])
 # =========== EJERCICIO NUMERO 11 ===========
 
 # =========== EJERCICIO NUMERO 12 ===========
