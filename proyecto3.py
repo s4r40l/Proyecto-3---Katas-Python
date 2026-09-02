@@ -319,6 +319,14 @@ estudiantes_destacados = list(filter(lambda est: est["calificacion"] >= 90, estu
 print(estudiantes_destacados)
 
 # =========== EJERCICIO NUMERO 19 ===========
+def filtrar_impares(lista_numeros):
+    return list(filter(lambda x: x % 2 != 0, lista_numeros))
+# La función mira si dividiendo cada número de la lista por dos, el resïduo de la
+# división es 0 o no. Si no lo es, es impar y añade el número a la lista de impares
+
+numeros = [1, 5, 10, 20, 7, 2, 6, 8]
+print(filtrar_impares(numeros))
+
 # =========== EJERCICIO NUMERO 20 ===========
 # =========== EJERCICIO NUMERO 21 ===========
 # =========== EJERCICIO NUMERO 22 ===========
