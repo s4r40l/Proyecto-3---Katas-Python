@@ -243,6 +243,21 @@ def longitudes_palabras(frase):
 print(longitudes_palabras("Hoy me apetece programar en python"))
 
 # =========== EJERCICIO NUMERO 13 ===========
+def mayus_minus(caracteres):
+    # Convertimos todo a minúsculas para evitar duplicados (set es case sensitive)
+    caracteres_normalizados = [c.lower() for c in caracteres]
+
+    # Eliminamos duplicados con set()
+    caracteres_unicos = set(caracteres_normalizados)
+
+    # Creamos las tuplas (mayúscula, minúscula) usando map()
+    resultado = list(map(lambda letra: (letra.upper(), letra.lower()), caracteres_unicos))
+
+    return resultado
+
+
+print(mayus_minus(["a", "b", "A", "c", "C", "d"]))
+
 # =========== EJERCICIO NUMERO 14 ===========
 # =========== EJERCICIO NUMERO 15 ===========
 # =========== EJERCICIO NUMERO 16 ===========
