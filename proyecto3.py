@@ -269,6 +269,12 @@ palabras = ["gato", "perro", "gallina", "casa", "Girasol", "pato"]
 print(palabras_por_letra(palabras, "g"))
 
 # =========== EJERCICIO NUMERO 15 ===========
+def suma_tres(lista_numeros):
+    return list(map(lambda x: x + 3, lista_numeros))
+
+numeros = [1, 5, 10]
+print(suma_tres(numeros))
+
 # =========== EJERCICIO NUMERO 16 ===========
 # =========== EJERCICIO NUMERO 17 ===========
 # =========== EJERCICIO NUMERO 18 ===========
