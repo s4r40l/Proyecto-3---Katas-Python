@@ -259,6 +259,15 @@ def mayus_minus(caracteres):
 print(mayus_minus(["a", "b", "A", "c", "C", "d"]))
 
 # =========== EJERCICIO NUMERO 14 ===========
+def palabras_por_letra(lista_palabras, letra):
+    # Usamos filter() para quedarnos solo con las palabras que empiezan por la letra entrada por parámetros
+    resultado = list(filter(lambda palabra: palabra.lower().startswith(letra), lista_palabras))
+
+    return resultado
+
+palabras = ["gato", "perro", "gallina", "casa", "Girasol", "pato"]
+print(palabras_por_letra(palabras, "g"))
+
 # =========== EJERCICIO NUMERO 15 ===========
 # =========== EJERCICIO NUMERO 16 ===========
 # =========== EJERCICIO NUMERO 17 ===========
