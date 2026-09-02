@@ -228,3 +228,27 @@ finally:
 
 """
 # =========== EJERCICIO NUMERO 12 ===========
+def longitudes_palabras(frase):
+    # Dividimos la frase en palabras usando split() ya que por defecto separa los elementos por los espacios
+    # Esto genera una lista como ["hola", "mundo"]
+    palabras = frase.split()
+
+    # Usamos map() para ver la longitud de cada palabra de la lista
+    # map() devuelve un objeto iterable, así que lo convertimos en lista
+    largura = list(map(len, palabras))
+
+    # Devolvemos la lista con la largura de cada palabra
+    return largura
+
+print(longitudes_palabras("Hoy me apetece programar en python"))
+
+# =========== EJERCICIO NUMERO 13 ===========
+# =========== EJERCICIO NUMERO 14 ===========
+# =========== EJERCICIO NUMERO 15 ===========
+# =========== EJERCICIO NUMERO 16 ===========
+# =========== EJERCICIO NUMERO 17 ===========
+# =========== EJERCICIO NUMERO 18 ===========
+# =========== EJERCICIO NUMERO 19 ===========
+# =========== EJERCICIO NUMERO 20 ===========
+# =========== EJERCICIO NUMERO 21 ===========
+# =========== EJERCICIO NUMERO 22 ===========
