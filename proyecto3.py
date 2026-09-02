@@ -328,5 +328,13 @@ numeros = [1, 5, 10, 20, 7, 2, 6, 8]
 print(filtrar_impares(numeros))
 
 # =========== EJERCICIO NUMERO 20 ===========
+def solo_enteros(lista):
+    # filter() recorre la lista y se queda solo con los elementos
+    # cuyo tipo sea exactamente int
+    return list(filter(lambda elemento_lista: type(elemento_lista) is int, lista))
+
+datos = [3, "hola", 7, "23", 10, "python", 5]
+print(solo_enteros(datos))
+
 # =========== EJERCICIO NUMERO 21 ===========
 # =========== EJERCICIO NUMERO 22 ===========
