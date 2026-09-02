@@ -289,6 +289,18 @@ texto = "Los desarrolladores crean aplicaciones increíbles"
 print(palabras_largas(texto, 5))
 
 # =========== EJERCICIO NUMERO 17 ===========
+from functools import reduce
+
+def lista_a_numero(digitos):
+    # Usamos reduce() para ir construyendo el número paso a paso.
+    # 'acumulado' guarda el número que llevamos formado.
+    # 'd' es el siguiente dígito de la lista.
+    # En cada paso multiplicamos el acumulado por 10 y sumamos el dígito.
+    # Ejemplo: [5,7,2] → (((5*10)+7)*10)+2 → 572
+    return reduce(lambda acumulado, d: acumulado * 10 + d, digitos)
+
+print(lista_a_numero([5, 7, 2]))
+
 # =========== EJERCICIO NUMERO 18 ===========
 # =========== EJERCICIO NUMERO 19 ===========
 # =========== EJERCICIO NUMERO 20 ===========
