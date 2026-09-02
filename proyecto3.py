@@ -133,6 +133,20 @@ finally:
     print("Función finalizada.")
 
 # =========== EJERCICIO NUMERO 9 ===========
+def filtrar_mascotas(lista_mascotas):
+    # Lista de mascotas prohibidas en España
+    listaProhibidas = ["Mapache", "Tigre", "Serpiente Pitón", "Cocodrilo", "Oso"]
+
+    # Usamos filter() para quedarnos solo con las mascotas que NO están en la lista prohibida.
+    # La función lambda recibe cada mascota y devuelve True si NO está prohibida.
+    # filter() mantiene solo los elementos donde la condición es True.
+    mascotas_filtradas = list(filter(lambda mascota: mascota not in listaProhibidas, lista_mascotas))
+
+    # Devolvemos la nueva lista
+    return mascotas_filtradas
+
+mascotas = ["Perro", "Gato", "Mapache", "Tortuga", "Oso", "Canario"]
+print(filtrar_mascotas(mascotas))
 
 # =========== EJERCICIO NUMERO 10 ===========
 
