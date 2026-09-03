@@ -342,3 +342,25 @@ cubo = lambda n: n ** 3 # Crea una función pequeña y sencilla como es multipli
 print(cubo(4))  # Ejemplos de uso
 print(cubo(2))  
 # =========== EJERCICIO NUMERO 22 ===========
+from functools import reduce
+
+def producto_total(lista):
+    # reduce() va acumulando el resultado.
+    # En cada paso multiplica el acumulado por el siguiente número.
+    # Ejemplo: [2, 3, 4] → (((2*3)*4)) = 24
+    return reduce(lambda acumulado, num: acumulado * num, lista)
+
+numeros = [2, 3, 4, 5]
+print(producto_total(numeros))
+
+# =========== EJERCICIO NUMERO 23 ===========
+
+# =========== EJERCICIO NUMERO 24 ===========
+# =========== EJERCICIO NUMERO 25 ===========
+# =========== EJERCICIO NUMERO 26 ===========
+# =========== EJERCICIO NUMERO 27 ===========
+# =========== EJERCICIO NUMERO 28 ===========
+# =========== EJERCICIO NUMERO 29 ===========
+# =========== EJERCICIO NUMERO 30 ===========
+
+
