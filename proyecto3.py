@@ -411,6 +411,24 @@ numeros = [3, 5, 2, 8, 5, 10, 2]
 print(primer_duplicado(numeros))
 
 # =========== EJERCICIO NUMERO 29 ===========
+def enmascarar(variable):
+    cadena = str(variable)  # Convertimos la variable a texto
+    resultado = ""          # Aquí construiremos la cadena enmascarada
+
+    # Recorremos la cadena con un índice
+    for i in range(len(cadena)):
+        # Si estamos en los últimos 4 caracteres, los dejamos tal cual
+        if i >= len(cadena) - 4:
+            resultado += cadena[i]
+        else:
+            resultado += "#"  # Enmascaramos el resto
+
+    return resultado
+
+print(enmascarar("123456789"))
+print(enmascarar(987654321))
+print(enmascarar("hola"))
+
 # =========== EJERCICIO NUMERO 30 ===========
 
 
