@@ -354,6 +354,14 @@ numeros = [2, 3, 4, 5]
 print(producto_total(numeros))
 
 # =========== EJERCICIO NUMERO 23 ===========
+from functools import reduce
+
+def concatenar_palabras(lista_palabras):
+    # En cada paso junta la palabra con la siguiente.
+    return reduce(lambda acumulado, palabra: acumulado + palabra, lista_palabras)
+
+palabras = ["Hola", "Mundo", "!"]
+print(concatenar_palabras(palabras))
 
 # =========== EJERCICIO NUMERO 24 ===========
 # =========== EJERCICIO NUMERO 25 ===========
