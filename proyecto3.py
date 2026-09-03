@@ -374,6 +374,13 @@ numeros = [20, 5, 3, 2]
 print(diferencia_total(numeros))
 
 # =========== EJERCICIO NUMERO 25 ===========
+def contar_caracteres(cadena):
+    # len() devuelve la cantidad total de caracteres en la cadena
+    return len(cadena)
+
+texto = "Hoy no he ido al mercado"
+print(contar_caracteres(texto))
+
 # =========== EJERCICIO NUMERO 26 ===========
 # =========== EJERCICIO NUMERO 27 ===========
 # =========== EJERCICIO NUMERO 28 ===========
