@@ -430,5 +430,17 @@ print(enmascarar(987654321))
 print(enmascarar("hola"))
 
 # =========== EJERCICIO NUMERO 30 ===========
+def son_anagramas(palabra1, palabra2):
+    # Convertimos ambas palabras a minúsculas para evitar diferencias por mayúsculas
+    p1 = palabra1.lower()
+    p2 = palabra2.lower()
 
+    # Ordenamos las letras de cada palabra y comparamos
+    return sorted(p1) == sorted(p2)
+
+
+# Imprimimos el resultado por pantalla
+print(son_anagramas("Sergio", "Riesgos")) 
+print(son_anagramas("Delira", "Lidera"))   
+print(son_anagramas("Hola", "Halo"))   
 
