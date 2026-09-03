@@ -337,4 +337,8 @@ datos = [3, "hola", 7, "23", 10, "python", 5]
 print(solo_enteros(datos))
 
 # =========== EJERCICIO NUMERO 21 ===========
+cubo = lambda n: n ** 3 # Crea una función pequeña y sencilla como es multiplicar el número dado por 3 para conseguir el cubo
+
+print(cubo(4))  # Ejemplos de uso
+print(cubo(2))  
 # =========== EJERCICIO NUMERO 22 ===========
