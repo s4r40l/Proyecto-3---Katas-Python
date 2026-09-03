@@ -397,6 +397,19 @@ numeros = [4, 8, 6, 10]
 print(promedio(numeros))
 
 # =========== EJERCICIO NUMERO 28 ===========
+def primer_duplicado(lista):
+    vistos = set()  # Conjunto inicializado para guardar los elementos ya encontrados
+
+    for elemento in lista:
+        if elemento in vistos:   # Si ya lo hemos visto, es el primer duplicado
+            return elemento
+        vistos.add(elemento)     # Si no, lo añadimos al conjunto
+
+    return None  # Si no hay duplicados, devolvemos None
+
+numeros = [3, 5, 2, 8, 5, 10, 2]
+print(primer_duplicado(numeros))
+
 # =========== EJERCICIO NUMERO 29 ===========
 # =========== EJERCICIO NUMERO 30 ===========
 
