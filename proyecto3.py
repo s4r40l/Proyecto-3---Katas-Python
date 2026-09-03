@@ -389,6 +389,13 @@ print(resto(20, 4))
 print(resto(7, 2))
 
 # =========== EJERCICIO NUMERO 27 ===========
+def promedio(lista):
+    # Sumamos todos los valores y dividimos entre la cantidad de elementos
+    return sum(lista) / len(lista)
+
+numeros = [4, 8, 6, 10]
+print(promedio(numeros))
+
 # =========== EJERCICIO NUMERO 28 ===========
 # =========== EJERCICIO NUMERO 29 ===========
 # =========== EJERCICIO NUMERO 30 ===========
