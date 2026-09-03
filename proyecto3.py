@@ -364,6 +364,15 @@ palabras = ["Hola", "Mundo", "!"]
 print(concatenar_palabras(palabras))
 
 # =========== EJERCICIO NUMERO 24 ===========
+from functools import reduce
+
+def diferencia_total(lista):
+    # reduce() va restando cada número al acumulado.
+    return reduce(lambda acumulado, x: acumulado - x, lista)
+
+numeros = [20, 5, 3, 2]
+print(diferencia_total(numeros))
+
 # =========== EJERCICIO NUMERO 25 ===========
 # =========== EJERCICIO NUMERO 26 ===========
 # =========== EJERCICIO NUMERO 27 ===========
