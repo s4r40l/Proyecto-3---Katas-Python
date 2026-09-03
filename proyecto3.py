@@ -382,6 +382,12 @@ texto = "Hoy no he ido al mercado"
 print(contar_caracteres(texto))
 
 # =========== EJERCICIO NUMERO 26 ===========
+resto = lambda a, b: a % b # Se crea la función lambda corta y sencilla para poder ejecutarla en una sola línea 
+
+print(resto(10, 4)) # Ejemplos
+print(resto(20, 4))
+print(resto(7, 2))
+
 # =========== EJERCICIO NUMERO 27 ===========
 # =========== EJERCICIO NUMERO 28 ===========
 # =========== EJERCICIO NUMERO 29 ===========
