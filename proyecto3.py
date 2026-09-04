@@ -496,6 +496,14 @@ print(buscar_empleado("Sergio Ruiz", empleados))   # Programador
 print(buscar_empleado("Laura Gómez", empleados))   # La persona no trabaja aquí.
 
 # =========== EJERCICIO NUMERO 33 ===========
+sumar_elementos = lambda lista1, lista2: \
+    list(map(lambda numero_1, numero_2: numero_1 + numero_2, lista1, lista2))
+
+numeros_a = [1, 2, 3]
+numeros_b = [4, 5, 6]
+
+print(sumar_elementos(numeros_a, numeros_b))
+
 # =========== EJERCICIO NUMERO 34 ===========
 # =========== EJERCICIO NUMERO 35 ===========
 # =========== EJERCICIO NUMERO 36 ===========
