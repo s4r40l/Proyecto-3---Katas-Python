@@ -444,7 +444,7 @@ print(son_anagramas("Sergio", "Riesgos"))
 print(son_anagramas("Delira", "Lidera"))   
 print(son_anagramas("Hola", "Halo"))
 
-# =========== EJERCICIO NUMERO 30 ===========
+# =========== EJERCICIO NUMERO 31 ===========
 def buscar_nombre():
     try:
         # Pedimos al usuario que ingrese nombres separados por comas
@@ -468,3 +468,38 @@ def buscar_nombre():
         print("Error:", error)
 
 buscar_nombre()
+
+# =========== EJERCICIO NUMERO 32 ===========
+def buscar_empleado(nombre_completo, empleados):
+    # Recorremos la lista de empleados
+    for empleado in empleados:
+        # Cada empleado es un diccionario con 'nombre' y 'puesto'
+        if empleado["nombre"] == nombre_completo:
+            return empleado["puesto"]  # Si coincide, devolvemos el puesto
+
+    # Si terminamos el bucle sin encontrarlo, devolvemos el mensaje
+    return "La persona no trabaja aquí."
+
+empleados = [
+    {"nombre": "Ana López", 
+     "puesto": "Contable"
+     },
+    {"nombre": "Sergio Ruiz", 
+     "puesto": "Programador"
+     },
+    {"nombre": "Marta Pérez", 
+     "puesto": "Diseñadora"
+     }
+]
+
+print(buscar_empleado("Sergio Ruiz", empleados))   # Programador
+print(buscar_empleado("Laura Gómez", empleados))   # La persona no trabaja aquí.
+
+# =========== EJERCICIO NUMERO 33 ===========
+# =========== EJERCICIO NUMERO 34 ===========
+# =========== EJERCICIO NUMERO 35 ===========
+# =========== EJERCICIO NUMERO 36 ===========
+# =========== EJERCICIO NUMERO 37 ===========
+# =========== EJERCICIO NUMERO 38 ===========
+# =========== EJERCICIO NUMERO 39 ===========
+# =========== EJERCICIO NUMERO 40 ===========
