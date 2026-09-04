@@ -571,6 +571,83 @@ arbol.quitar_rama(2)
 print(arbol.info_arbol())
 
 # =========== EJERCICIO NUMERO 35 ===========
+class UsuarioBanco:
+    def __init__(self, nombre, saldo, cuenta_corriente):
+        # Guardamos el nombre del usuario
+        self.nombre = nombre
+        
+        # Guardamos el saldo inicial
+        self.saldo = saldo
+        
+        # Indicamos si tiene cuenta corriente (True/False)
+        self.cuenta_corriente = cuenta_corriente
+
+        # Mensaje de creación del usuario
+        print(f"Usuario creado: {self.nombre} con saldo {self.saldo} y cuenta corriente = {self.cuenta_corriente}")
+
+    def retirar_dinero(self, cantidad):
+        # Comprobamos si el usuario tiene suficiente saldo
+        if cantidad > self.saldo:
+            # Lanzamos una excepción indicando quién falla
+            raise Exception(f"{self.nombre} no tiene saldo suficiente para retirar {cantidad}.")
+        
+        # Si hay saldo suficiente, restamos la cantidad
+        self.saldo -= cantidad
+        print(f"{self.nombre} ha retirado {cantidad}. Nuevo saldo: {self.saldo}")
+
+    def transferir_dinero(self, otro_usuario, cantidad):
+        # Comprobamos que el usuario origen tenga cuenta corriente
+        if not self.cuenta_corriente:
+            raise Exception(f"{self.nombre} no tiene cuenta corriente y no puede transferir dinero.")
+
+        # Comprobamos que el usuario destino tenga cuenta corriente
+        if not otro_usuario.cuenta_corriente:
+            raise Exception(f"{otro_usuario.nombre} no tiene cuenta corriente y no puede recibir transferencias.")
+
+        # Comprobamos que el usuario origen tenga saldo suficiente
+        if cantidad > self.saldo:
+            raise Exception(f"{self.nombre} no tiene saldo suficiente para transferir {cantidad}.")
+
+        # Realizamos la transferencia
+        self.saldo -= cantidad
+        otro_usuario.saldo += cantidad
+
+        print(f"{self.nombre} ha transferido {cantidad} a {otro_usuario.nombre}.")
+        print(f"   Nuevo saldo de {self.nombre}: {self.saldo}")
+        print(f"   Nuevo saldo de {otro_usuario.nombre}: {otro_usuario.saldo}")
+
+    def agregar_dinero(self, cantidad):
+        # Aumentamos el saldo del usuario
+        self.saldo += cantidad
+        print(f"{self.nombre} ha añadido {cantidad}. Nuevo saldo: {self.saldo}")
+
+# Crear dos usuarios
+alicia = UsuarioBanco("Alicia", 100, True)
+bob = UsuarioBanco("Bob", 50, True)
+
+# Agregar 20 unidades al saldo de Bob
+try:
+    bob.agregar_dinero(20)
+except Exception as error:
+    print("Error:", error)
+
+# Transferir 80 unidades de Bob a Alicia
+try:
+    bob.transferir_dinero(alicia, 80)
+except Exception as error:
+    print("Error:", error)
+
+# Retirar 50 unidades del saldo de Alicia
+try:
+    alicia.retirar_dinero(50)
+except Exception as error:
+    print("Error:", error)
+
+# Mostrar saldos finales
+print("\n--- RESULTADOS FINALES ---")
+print(f"Saldo final de Alicia: {alicia.saldo}")
+print(f"Saldo final de Bob: {bob.saldo}")
+
 # =========== EJERCICIO NUMERO 36 ===========
 # =========== EJERCICIO NUMERO 37 ===========
 # =========== EJERCICIO NUMERO 38 ===========
