@@ -442,5 +442,29 @@ def son_anagramas(palabra1, palabra2):
 # Imprimimos el resultado por pantalla
 print(son_anagramas("Sergio", "Riesgos")) 
 print(son_anagramas("Delira", "Lidera"))   
-print(son_anagramas("Hola", "Halo"))   
+print(son_anagramas("Hola", "Halo"))
 
+# =========== EJERCICIO NUMERO 30 ===========
+def buscar_nombre():
+    try:
+        # Pedimos al usuario que ingrese nombres separados por comas
+        entrada = input("Ingresa una lista de nombres separados por comas: ")
+
+        # Convertimos la cadena en una lista de nombres
+        lista_nombres = [nombre.strip() for nombre in entrada.split(",")]
+
+        # Pedimos el nombre que queremos buscar
+        nombre_buscar = input("Ingresa el nombre que quieres buscar: ").strip()
+
+        # Si el nombre está en la lista, lo mostramos
+        if nombre_buscar in lista_nombres:
+            print("Nombre encontrado:", nombre_buscar)
+        else:
+            # Lanzamos una excepción si no está
+            raise Exception("El nombre no se encuentra en la lista.")
+
+    # Capturamos cualquier excepción que ocurra
+    except Exception as error:
+        print("Error:", error)
+
+buscar_nombre()
