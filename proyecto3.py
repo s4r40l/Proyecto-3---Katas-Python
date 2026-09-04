@@ -505,6 +505,71 @@ numeros_b = [4, 5, 6]
 print(sumar_elementos(numeros_a, numeros_b))
 
 # =========== EJERCICIO NUMERO 34 ===========
+class Arbol:
+    def __init__(self):
+        # El tronco del árbol empieza con longitud 1
+        # Representa la parte principal del árbol
+        self.tronco = 1
+
+        # Lista donde guardaremos las longitudes de cada rama
+        # Al inicio no hay ramas, por eso está vacía
+        self.ramas = []
+
+    def crecer_tronco(self):
+        # Le suma 1 a la longitud del tronco
+        self.tronco += 1
+
+    def nueva_rama(self):
+        # Añadimos una nueva rama al árbol
+        # Todas las ramas nuevas empiezan con longitud 1
+        self.ramas.append(1)
+
+    def crecer_ramas(self):
+        # Recorremos todas las ramas existentes
+        # Se le suma 1 a la unidad de cada rama
+        for i in range(len(self.ramas)):
+            self.ramas[i] += 1
+
+    def quitar_rama(self, posicion):
+        # Eliminamos una rama según su posición en la lista
+        # Primero comprobamos que la posición exista
+        if 0 <= posicion < len(self.ramas):
+            # pop elimina la rama
+            self.ramas.pop(posicion)
+        else:
+            # Si la posición no es válida, mostramos un mensaje
+            print("No existe esa rama.")
+
+    def info_arbol(self):
+        # Devuelve un texto con toda la información del árbol
+        # Incluye: longitud del tronco, número de ramas y longitudes de cada una
+        return f"Tronco: {self.tronco}, Ramas: {len(self.ramas)}, Longitudes: {self.ramas}"
+
+
+# CASOS DE USO
+
+# Crear un árbol
+arbol = Arbol()  # Se crea un árbol con tronco=1 y sin ramas
+
+# Hacer crecer el tronco una unidad
+arbol.crecer_tronco()  # Tronco pasa de 1 a 2
+
+# Añadir una nueva rama
+arbol.nueva_rama()  # Se añade una rama de longitud 1
+
+# Hacer crecer todas las ramas una unidad
+arbol.crecer_ramas()  # La rama pasa de 1 a 2
+
+# Añadir dos nuevas ramas
+arbol.nueva_rama()  # Rama nueva de longitud 1
+arbol.nueva_rama()  # Otra rama nueva de longitud 1
+
+# Quita la rama situada en la posición 2
+arbol.quitar_rama(2)
+
+# Obtener información sobre el árbol
+print(arbol.info_arbol())
+
 # =========== EJERCICIO NUMERO 35 ===========
 # =========== EJERCICIO NUMERO 36 ===========
 # =========== EJERCICIO NUMERO 37 ===========
